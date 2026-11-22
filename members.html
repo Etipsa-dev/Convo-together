@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Members | Convo Together</title>
+<link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="index.html"><span class="logo-icon" aria-hidden="true">💬</span>Convo<span>Together</span></a>
+  <nav aria-label="Main navigation">
+    <a href="index.html" >Home</a>
+    <a href="find-a-partner.html">Find Partners</a>
+    <a href="languages.html">Languages</a>
+    <a href="members.html" aria-current="page" >Members</a>
+    <a href="requests.html">Requests &amp; Messages</a>
+    <a href="safety.html">Report &amp; Moderation </a>
+    <a href="signup.html" id="authLink">Sign Up</a>
+  </nav>
+  
+</header>
+<dialog id="signup-info">
+  <h2>Convo Together demo</h2>
+  <p>You can browse members and try the partner finder without an account.</p>
+  <a class="btn" href="find-a-partner.html">Find Partners</a>
+  <form method="dialog"><button class="btn btn-quiet">Close</button></form>
+</dialog>
+
+<main id="top">
+  <section id="members">
+    <h1>Meet the members</h1>
+    <p class="lead">Every profile says what someone speaks, what they are learning, and when they are free.</p>
+    <label for="filter-lang">Show people who speak</label>
+    <select id="filter-lang" onchange="showProfiles()"></select>
+    <div id="profile-grid" class="grid"></div>
+  </section>
+</main>
+
+<footer>
+  <p>A community for curious learners to practise languages and connect through conversation.</p>
+</footer>
+
+<script src="script3.js"></script>
+<script>
+const authLink = document.getElementById("authLink");
+
+if (authLink) {
+    const loggedIn = localStorage.getItem("loggedIn");
+
+    if (loggedIn === "true") {
+        authLink.textContent = "Profile";
+        authLink.href = "profile.html";
+    }
+}
+</script>
+</body>
+</html>

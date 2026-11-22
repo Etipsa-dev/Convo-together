@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Convo Together – Local Language Exchange Community</title>
+<link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="index.html"><span class="logo-icon" aria-hidden="true">💬</span>Convo<span>Together</span></a>
+  <nav aria-label="Main navigation">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="find-a-partner.html">Find Partners</a>
+    <a href="languages.html">Languages</a>
+    <a href="members.html">Members</a>
+    <a href="requests.html">Requests &amp; Messages</a>
+    <a href="safety.html">Report &amp; Moderation </a>
+    <a href="signup.html" id="authLink">Sign Up</a>
+  </nav>
+  
+</header>
+<dialog id="signup-info">
+  <h2>Convo Together demo</h2>
+  <p>You can browse members and try the partner finder without an account.</p>
+  <a class="btn" href="find-a-partner.html">Find Partners</a>
+  <form method="dialog"><button class="btn btn-quiet">Close</button></form>
+</dialog>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">🌍 LEARN • CONNECT • GROW</p>
+      <h1>Learn Languages.<br><em>Meet People.</em><br>Build Connections.</h1>
+      <p class="intro">Welcome to Convo Together, a local language conversation community where you can learn languages, discover useful learning content and connect with language partners.</p>
+      <div class="hero-actions">
+        <a class="btn" href="learn.html">Start Learning →</a>
+        <a class="btn btn-quiet" href="find-a-partner.html">Find a Language Partner</a>
+      </div>
+    </div>
+    <div class="language-orbit" aria-label="Greetings in four languages">
+      <div class="language-card"><span>IN</span><strong>Hindi</strong><small>Namaste!</small></div>
+      <div class="language-card"><span>EN</span><strong>English</strong><small>Hello!</small></div>
+      <div class="language-card"><span>SP</span><strong>Spanish</strong><small>¡Hola!</small></div>
+      <div class="language-card"><span>FR</span><strong>French</strong><small>Bonjour!</small></div>
+      <div class="orbit-center" aria-hidden="true"><span>文</span><span>A</span></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>A community for curious learners to practise languages and connect through conversation.</p>
+</footer>
+
+<script src="script4.js"></script>
+<script>
+
+    const authLink = document.getElementById("authLink");
+
+    const loggedIn =
+        localStorage.getItem("loggedIn");
+
+    if (loggedIn === "true") {
+
+        authLink.href = "profile.html";
+
+        authLink.innerHTML = "Profile";
+
+        authLink.title = "My Profile";
+
+    }
+
+</script>
+</body>
+</html>

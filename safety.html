@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Safety &amp; Report | Convo Together</title>
+<link rel="stylesheet" href="style5.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="index.html"><span class="logo-icon" aria-hidden="true">💬</span>Convo<span>Together</span></a>
+  <nav aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="find-a-partner.html">Find Partners</a>
+    <a href="languages.html">Languages</a>
+    <a href="members.html">Members</a>
+    <a href="requests.html">Requests &amp; Messages</a>
+    <a href="safety.html" aria-current="page">Report &amp; Moderation </a>
+    <a href="signup.html" id="authLink">Sign Up</a>
+  </nav>
+
+</header>
+<dialog id="signup-info">
+  <h2>Convo Together demo</h2>
+  <p>You can browse members and try the partner finder without an account.</p>
+  <a class="btn" href="find-a-partner.html">Find Partners</a>
+  <form method="dialog"><button class="btn btn-quiet">Close</button></form>
+</dialog>
+
+<main id="top">
+  <section id="safety" class="tinted">
+    <h1>Safety &amp; Report</h1>
+  <div id="report-form" class="card">
+    <h2>Report a member or message</h2>
+    <label for="rep-who">Who are you reporting?</label>
+    <select id="rep-who"></select>
+    <label for="rep-reason">What happened?</label>
+    <select id="rep-reason">
+      <option>Harassment or rude messages</option>
+      <option>Fake profile</option>
+      <option>Asked for money or personal details</option>
+      <option>Something else</option>
+    </select>
+    <label for="rep-details">Details</label>
+    <textarea id="rep-details" rows="3" placeholder="Tell us what happened, in your own words."></textarea>
+    <button class="btn" type="button" onclick="sendReport()">Send report</button>
+    <p id="rep-note" class="note" role="status"></p>
+  </div>
+  </section>
+  <section id="guidelines">
+    <h2>Community guidelines</h2>
+    <p class="lead">Short and simple. They keep this a kind place to make mistakes in.</p>
+    <div class="grid">
+      <article class="card"><h3>Be kind about mistakes</h3><p>Everyone here is learning. Correct gently, and only when your partner wants it.</p></article>
+      <article class="card"><h3>Keep it respectful</h3><p>No harassment, hate or pressure. Disagree politely or leave the conversation.</p></article>
+      <article class="card"><h3>This is not a dating app</h3><p>Stop if someone says they are not interested in anything beyond language practice.</p></article>
+      <article class="card"><h3>Protect your privacy</h3><p>Do not share your home address or money details. Meet in public places and tell a friend.</p></article>
+      <article class="card"><h3>Be honest in your profile</h3><p>Use your real level and your real photo. One account per person.</p></article>
+      <article class="card"><h3>Speak up</h3><p>If something feels wrong, report it. You will not be penalised for reporting in good faith.</p></article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>A community for curious learners to practise languages and connect through conversation.</p>
+</footer>
+
+<script src="script5.js"></script>
+<script>
+const authLink = document.getElementById("authLink");
+
+if (authLink) {
+    const loggedIn = localStorage.getItem("loggedIn");
+
+    if (loggedIn === "true") {
+        authLink.textContent = "Profile";
+        authLink.href = "profile.html";
+    }
+}
+</script>
+</body>
+</html>

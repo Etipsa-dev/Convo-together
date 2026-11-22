@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Languages | Convo Together</title>
+<link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="index.html"><span class="logo-icon" aria-hidden="true">💬</span>Convo<span>Together</span></a>
+  <nav aria-label="Main navigation">
+    <a href="index.html" >Home</a>
+    <a href="find-a-partner.html">Find Partners</a>
+    <a href="languages.html" aria-current="page">Languages</a>
+    <a href="members.html">Members</a>
+    <a href="requests.html">Requests &amp; Messages</a>
+    <a href="safety.html">Report &amp; Moderation </a>
+    <a href="signup.html" id="authLink">Sign Up</a>
+  </nav>
+  
+</header>
+<dialog id="signup-info">
+  <h2>Convo Together demo</h2>
+  <p>You can browse members and try the partner finder without an account.</p>
+  <a class="btn" href="find-a-partner.html">Find Partners</a>
+  <form method="dialog"><button class="btn btn-quiet">Close</button></form>
+</dialog>
+
+<main id="top">
+  <section><h1>Languages</h1><p class="lead">Try a greeting in one of these languages.</p><div class="grid greeting-grid">      <div class="language-card"><span>IN</span><strong>Hindi</strong><small>Namaste!</small></div>
+      <div class="language-card"><span>EN</span><strong>English</strong><small>Hello!</small></div>
+      <div class="language-card"><span>SP</span><strong>Spanish</strong><small>¡Hola!</small></div>
+      <div class="language-card"><span>FR</span><strong>French</strong><small>Bonjour!</small></div></div><p>Browse <a href="members.html">Members</a> to see which languages they speak and are learning.</p></section>
+</main>
+
+<footer>
+  <p>A community for curious learners to practise languages and connect through conversation.</p>
+</footer>
+
+<script src="script4.js"></script>
+<script>
+const authLink = document.getElementById("authLink");
+
+if (authLink) {
+    const loggedIn = localStorage.getItem("loggedIn");
+
+    if (loggedIn === "true") {
+        authLink.textContent = "Profile";
+        authLink.href = "profile.html";
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up | Convo Together</title>
+
+    <link rel="stylesheet" href="style5.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+  <a class="logo" href="index.html"><span class="logo-icon" aria-hidden="true">💬</span>Convo<span>Together</span></a>
+  <nav aria-label="Main navigation">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="find-a-partner.html">Find Partners</a>
+    <a href="languages.html">Languages</a>
+    <a href="members.html">Members</a>
+    <a href="requests.html">Requests &amp; Messages</a>
+    <a href="safety.html">Report &amp; Moderation </a>
+     <a href="profile.html">profile</a>
+  </nav>
+  
+</header>
+
+    <main>
+
+        <section class="narrow">
+
+            <h2>Create Your Account</h2>
+
+
+            <form class="card" id="signupForm">
+
+                <label for="name">Full Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+
+                <!-- Email -->
+                <label for="email">Email Address</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+                <!-- Languages -->
+                <div class="f2">
+
+                    <div>
+                        <label for="speak">
+                            I Speak
+                        </label>
+
+                        <select id="speak" name="speak">
+
+                            <option>Hindi</option>
+                            <option>Punjabi</option>
+                          
+                            <option>Spanish</option>
+                            <option>French</option>
+                         
+
+                        </select>
+                    </div>
+
+
+                    <div>
+                        <label for="learn">
+                            I Want To Learn
+                        </label>
+
+                        <select id="learn" name="learn">
+
+                            <option>English</option>
+                            <option>Hindi</option>
+                            <option>Punjabi</option>
+                            
+                            <option>Spanish</option>
+                            <option>French</option>
+                            
+
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <!-- Level -->
+                <label for="level">
+                    My Learning Level
+                </label>
+
+                <select id="level" name="level">
+
+                    <option>Beginner</option>
+                    <option>Intermediate</option>
+                    <option>Advanced</option>
+
+                </select>
+
+
+                
+
+                </label>
+
+
+                <button
+                    class="btn"
+                    type="submit"
+                    style="width:100%;margin-top:10px;"
+                >
+                    Create Account
+                </button>
+
+                <script>
+    document.getElementById("signupForm").addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const speak = document.getElementById("speak").value;
+        const learn = document.getElementById("learn").value;
+        const level = document.getElementById("level").value;
+
+        localStorage.setItem("userName", name);
+        localStorage.setItem("userEmail", email);
+        localStorage.setItem("userSpeak", speak);
+        localStorage.setItem("userLearn", learn);
+        localStorage.setItem("userLevel", level);
+
+        window.location.href = "profile.html";
+    });
+</script>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

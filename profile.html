@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | Convo Together</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style3.css">
+
+</head>
+
+
+<body>
+<header class="site-header">
+  <a class="logo" href="index.html"><span class="logo-icon" aria-hidden="true">💬</span>Convo<span>Together</span></a>
+  <nav aria-label="Main navigation">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="find-a-partner.html">Find Partners</a>
+    <a href="languages.html">Languages</a>
+    <a href="members.html">Members</a>
+    <a href="requests.html">Requests &amp; Messages</a>
+    <a href="safety.html">Report &amp; Moderation </a>
+    
+  </nav>
+  
+</header>
+
+
+    <main>
+
+        <section>
+
+            
+            <div class="card pc">
+
+                
+                <div class="av">
+                    
+                </div>
+
+                
+                <div style="flex:1;">
+                    <h2 id="profileName" style="margin:0;">
+                        Your Name</h2>
+
+
+                    <p id="profileEmail" style="margin:5px 0;">yourname@email.com</p>
+                    <p>
+                        Speaks <span id="profileSpeak">Hindi</span>
+                        Learning <span id="profileLearn">English</span>
+                        
+                        <span id="profileLevel">Beginner</span>
+                    </p>
+
+
+                </div>
+
+                
+                <a>
+                    href="index.html" class="btn o s"></a>Log Out</a>
+ 
+            </div>
+
+            <div
+                class="g2"
+                style="margin-top:16px;"
+            >
+                <div class="card">
+
+                    <h3>
+                        About Me
+                    </h3>
+
+                    <p class="sub">Welcome to your Convo Together profile!</p>
+                        
+                    <p style="margin-top:16px;">🌍 <b>Native Language:</b> Hindi  </p>
+                       
+                    <p style="margin-top:10px;"> 📚 <b>Learning:</b> English </p>
+                       
+                    <p style="margin-top:10px;">🎯 <b>Level:</b>  Beginner</p>
+               
+                    <p style="margin-top:10px;"> 💬 <b>Goal:</b>Improve everyday conversation</p>
+                 
+                </div>
+
+
+
+    <script>
+
+    document.getElementById("profileName").textContent =
+        localStorage.getItem("userName") || "Your Name";
+
+    document.getElementById("profileEmail").textContent =
+        localStorage.getItem("userEmail") || "yourname@email.com";
+
+    document.getElementById("profileSpeak").textContent =
+        localStorage.getItem("userSpeak") || "Hindi";
+
+    document.getElementById("profileLearn").textContent =
+        localStorage.getItem("userLearn") || "English";
+
+    document.getElementById("profileLevel").textContent =
+        localStorage.getItem("userLevel") || "Beginner";
+
+</script>
+
+
+</body>
+
+</html>
